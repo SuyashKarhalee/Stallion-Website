@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url('../Fonts/Formula1-Bold_web_0.ttf');
+}
+
+@font-face {
+    font-family: myFont1;
+    src: url('../Fonts/Formula1-Regular_web_0.ttf');
+}
+
+body {
+    font-family: 'myFont1';
+}
+
+
+/* Navbar styling utility styling */
+
+.navbar {
+    transition: all 0.4s ease-in-out;
+    font-family: myFont;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    /* Adjusted padding values */
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    /* Changed background color */
+    /* border: 1px solid red; */
+    /* Changed border color and added solid style */
+    border-radius: 0.25rem;
+}
+
+.navbar-toggler-icon .line {
+    align-items: center;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    /* Adjust the color as needed */
+    margin: 5px 0;
+}
+
+.navbar-go {
+    background-color: #1e1f22 !important;
+}
+
+.navbar-elec {
+    background-color: #2C3639!important;
+}
+
+.nav-link-go {
+    color: #fff !important;
+}
+
+.nav-link-go::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #eb2222;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-link-elec {
+    color: #fff !important;
+}
+
+.nav-link-elec::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #42906e;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* button styling for themes */
+
+.btn-go {
+    background-color: #eb2222;
+    color: #fff;
+}
+
+.btn-elec {
+    background-color: #42906e;
+    color: #fff;
+}
+
+
+/* footer */
+
+
+/* Footer */
+
+.container-f {
+    max-width: 1400px;
+    margin: 20px 20px;
+}
+
+.content1 {
+    color: white;
+}
+
+.row-f {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    color: white;
+    text-align: left;
+}
+
+.footer {
+    /* background-color: #24262b; */
+    padding: 40px 0;
+}
+
+
+/* footer background change theme */
+
+.footbg-go {
+    background-color: #24262b;
+    ;
+}
+
+.footbg-elec {
+    background-color: #2C3639;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 10px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    /* font-weight: 500; */
+    position: relative;
+}
+
+.footer-col-go {
+    color: #fff !important;
+}
+
+.footer-col-go h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e10600;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col-elec {
+    color: #fff !important;
+}
+
+.footer-col-elec h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #42906e;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    /* padding: 12px; */
+}
+
+
+/* Common hover styles for both themes */
+
+.footer-col .social-links a.theme-hover:hover {
+    color: #fff;
+}
+
+
+/* Theme-specific hover styles */
+
+.theme-go .footer-col .social-links a.theme-hover:hover {
+    background-color: #e10600;
+}
+
+.theme-elec .footer-col .social-links a.theme-hover:hover {
+    background-color: #42906e;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*responsive*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
